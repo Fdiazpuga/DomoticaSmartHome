@@ -2,7 +2,7 @@
 #include "WiFi.h"
  
 const char* ssid = "DevOps";
-const char* password =  "IOce7SmKV|b@Wmd\W]DX";
+const char* password =  "CMJGMww8I1oVUQwqyB8B";
  
 void setup() {
  
@@ -19,7 +19,7 @@ void setup() {
  
 }
  
-void loop() {}
+ 
 void loop() {
   // put your main code here, to run repeatedly:
 }
