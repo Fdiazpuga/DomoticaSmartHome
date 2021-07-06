@@ -15,14 +15,19 @@ void setup() {
   WiFi.begin(ssid, password);
  
   while (WiFi.status() != WL_CONNECTED) {
+    //Led de Placa parpadea si no tiene conexión WiFi
     delay(500);
     Serial.println("Connecting to WiFi..");
-    
+    digitalWrite(LED, HIGH);
+    delay(50);
+    digitalWrite(LED, LOW);
+    delay(50);
   }
- 
+  // Si se conecta a la red, el led de la placa se mantiene encendido durante 5seg luego se apaga
   Serial.println("Connected to the WiFi network");
-  digitalWrite(LED, HIGH); //Led de placa indica que está conectado a wifi
-  delay(250);
+  digitalWrite(LED, HIGH); 
+  delay(5000);
+  digitalWrite(LED, LOW);
 }
  
  
