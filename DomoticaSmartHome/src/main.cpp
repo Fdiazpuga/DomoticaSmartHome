@@ -1,16 +1,19 @@
 #include <Arduino.h>
 #include "WiFi.h"
 
- 
+
+#define LED 2
+
 const char* ssid = "DevOps";
 const char* password =  "CMJGMww8I1oVUQwqyB8B";
 
-#define LED 2
+const int relay = 26;
 
 void setup() {
  
   Serial.begin(115200);
   pinMode(LED, OUTPUT);
+  pinMode(relay, OUTPUT);
 
   WiFi.begin(ssid, password);
  
@@ -32,5 +35,15 @@ void setup() {
  
  
 void loop() {
-  // put your main code here, to run repeatedly:
+  // Normally Open configuration, send LOW signal to let current flow
+  // (if you're usong Normally Closed configuration send HIGH signal)
+  digitalWrite(relay, LOW);
+  Serial.println("Current Flowing");
+  delay(5000); 
+
+  // Normally Open configuration, send LOW signal to let current flow
+  // (if you're usong Normally Closed configuration send HIGH signal)
+  digitalWrite(relay, HIGH);
+  Serial.println("Current Not Flowing");
+  delay(5000); 
 }
