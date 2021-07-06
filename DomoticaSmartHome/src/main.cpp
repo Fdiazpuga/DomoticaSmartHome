@@ -7,13 +7,17 @@
 const char* ssid = "DevOps";
 const char* password =  "CMJGMww8I1oVUQwqyB8B";
 
-const int relay = 26;
+const int relay1 = 25;
+const int relay2 = 26;
 
 void setup() {
  
   Serial.begin(115200);
   pinMode(LED, OUTPUT);
-  pinMode(relay, OUTPUT);
+  pinMode(relay1, OUTPUT);
+  pinMode(relay2, OUTPUT);
+
+// Configuración del WiFi
 
   WiFi.begin(ssid, password);
  
@@ -37,13 +41,21 @@ void setup() {
 void loop() {
   // Normally Open configuration, send LOW signal to let current flow
   // (if you're usong Normally Closed configuration send HIGH signal)
-  digitalWrite(relay, LOW);
-  Serial.println("Current Flowing");
-  delay(5000); 
+  digitalWrite(relay1, LOW);
+  Serial.println("Relé 1 Encendido");
+  delay(5000);
+
+  digitalWrite(relay2, LOW);
+  Serial.println("Relé 2 Encendido");
+  delay(5000);  
 
   // Normally Open configuration, send LOW signal to let current flow
   // (if you're usong Normally Closed configuration send HIGH signal)
-  digitalWrite(relay, HIGH);
-  Serial.println("Current Not Flowing");
+  digitalWrite(relay1, HIGH);
+  Serial.println("Relé 1 Apagado");
+  delay(5000);
+
+  digitalWrite(relay2, HIGH);
+  Serial.println("Relé 1 Apagado");
   delay(5000); 
 }
