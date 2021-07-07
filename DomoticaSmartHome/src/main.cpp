@@ -46,19 +46,19 @@ void loop() {
   // (if you're usong Normally Closed configuration send HIGH signal)
   digitalWrite(relay1, LOW);
   Serial.println("Relé 1 Encendido");
-  delay(5000);
+  delay(60000);
 
   digitalWrite(relay2, LOW);
   Serial.println("Relé 2 Encendido");
-  delay(5000);  
+  delay(60000);  
 
   // Normally Open configuration, send LOW signal to let current flow
   // (if you're usong Normally Closed configuration send HIGH signal)
   digitalWrite(relay1, HIGH);
   Serial.println("Relé 1 Apagado");
-  delay(5000);
+  delay(60000);
 
   digitalWrite(relay2, HIGH);
   Serial.println("Relé 1 Apagado");
-  delay(5000); 
+  delay(60000); 
 }
