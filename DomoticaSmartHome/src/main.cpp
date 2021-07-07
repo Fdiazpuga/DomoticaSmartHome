@@ -4,8 +4,11 @@
 
 #define LED 2
 
-const char* ssid = "DevOps";
-const char* password =  "CMJGMww8I1oVUQwqyB8B";
+//const char* ssid = "DevOps";
+//const char* password =  "CMJGMww8I1oVUQwqyB8B";
+const char* ssid = "Chocochino";
+const char* password =  "17156mscd";
+
 
 const int relay1 = 25;
 const int relay2 = 26;
